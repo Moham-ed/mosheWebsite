@@ -5,3 +5,6 @@
   --color-headings: #1b0760;
   --color-body: #918ca4;
 }
+body {
+  font-family: inter, Arial, Helvetica, sans-serif;
+}
