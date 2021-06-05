@@ -5,6 +5,9 @@
   --color-headings: #1b0760;
   --color-body: #918ca4;
 }
+
+/* typography */
+
 html {
   font-size: 62.5%;
 }
@@ -14,7 +17,9 @@ body {
   font-size: 2.4rem;
   line-height: 1.5;
 }
+
 /* all our Heading element , sytle goes her */
+
 h1,
 h2,
 h3 {
@@ -34,7 +39,8 @@ p {
   margin-top: 0;
 }
 
-/* her we made our heading , responsive */
+/* here we made our heading , responsive */
+
 @media screen and (min-width: 1024px) {
   body {
     font-size: 1.8rem;
@@ -47,5 +53,39 @@ p {
   }
   h3 {
     font-size: 2.4rem;
+  }
+}
+
+/* 
+
+  links style 
+
+*/
+a {
+  text-decoration: none;
+}
+.link-arrow {
+  color: var(--color-accent);
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* the arrow after the Learn more links '-->' */
+
+.link-arrow::after {
+  content: "-->";
+  margin-left: 5px;
+  transition: margin 0.15s;
+}
+.link-arrow:hover::after {
+  margin-left: 10px;
+}
+
+/* link style for 1024px+ screens */
+
+@media screen and (min-width: 1024px) {
+  .link-arrow {
+    font-size: 1.5rem;
   }
 }
