@@ -4,6 +4,8 @@
   --color-headings: #1b0760;
   --color-primary: #2584ff;
   --color-secondary: #00d9ff;
+  --color-border: #ccc;
+  --border-radius: 30px;
 }
 *,
 *::after,
@@ -239,8 +241,8 @@ a {
 
 /* Inputs */
 .input {
-  border-radius: 30px;
-  border: 1px solid #ccc;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--color-border);
   color: var(--color-headings);
   display: inline-block;
   outline: 0;
@@ -253,6 +255,24 @@ a {
   font-weight: 100;
 }
 
+.input-group {
+  display: flex;
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+}
+
+/* if an input group hase an input in it , border should be 0 */
+
+.input-group .input {
+  border: 0;
+  flex: 1;
+  padding: 1.5rem 1rem;
+}
+
+.input-group .btn {
+  margin: 4px;
+}
 @media screen and (min-width: 1024px) {
   .input::placeholder {
     font-size: 1.5rem;
